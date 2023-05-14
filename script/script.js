@@ -34,6 +34,7 @@ $(function () {
   //   $(".nav ul li a").mouseleave(function () {
   //     $(this).siblings().stop().slideUp();
   //   });
+
   // ↓↓↓↓ 슬라이더 가로
   //   setInterval(function () {
   //     $(".slider").animate({ "margin-left": "-100%" }, function () {

@@ -78,12 +78,13 @@ a:active {
 }
 .wrap > .hd > .nav {
   margin-top: 25px;
-  width: 100%;
   display: flex;
   justify-content: flex-end;
   position: absolute;
+  right: 0;
   /* B유형일 경우 start */
-  /* background: #eee; */
+  /* width: 100%;
+  background: #eee; */
   /* B유형일 경우 End */
 }
 .wrap > .hd > .nav > ul {
