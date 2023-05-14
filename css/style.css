@@ -30,9 +30,61 @@ a:active {
   align-items: flex-start;
   height: 100px;
   background: #eee;
+  position: relative;
+  z-index: 100;
+  position: relative;
+}
+
+/* B 유형 경우 start */
+/* .wrap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background: #eee;
+} */
+/* B 유형 경우 End */
+
+.logo {
+  position: relative;
+  z-index: 100;
+  padding: 0 16px;
+  overflow: hidden;
+  height: 100px;
+  width: 100px;
+}
+.logo > a {
+  position: absolute;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo > img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  width: 70px;
 }
 .wrap > .hd > .nav {
   margin-top: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  /* B유형일 경우 start */
+  /* background: #eee; */
+  /* B유형일 경우 End */
 }
 .wrap > .hd > .nav > ul {
   display: flex;
@@ -40,7 +92,6 @@ a:active {
 .wrap > .hd > .nav > ul > li {
   width: 100px;
   text-align: center;
-  background: white;
   display: flex;
   flex-direction: column;
 }
@@ -60,6 +111,7 @@ a:active {
   display: flex;
   flex-direction: column;
   display: none;
+  position: relative;
 }
 
 .wrap > .hd > .nav > ul > li > ul > li {
@@ -74,21 +126,43 @@ a:active {
   background: #ddd;
 }
 
-.wrap > .slider {
+.slider_wrap {
+  overflow: hidden;
   width: 1200px;
   height: 300px;
-  overflow: hidden;
-  background: #ddd;
+  position: relative;
 }
-.wrap > .slider > .img_wrap {
+.slider {
+  /* ↓↓↓↓ 가로슬라이드일 경우  start*/
+  /* width: 300%; */
+  /* ↑↑↑↑ 가로슬라이드일 경우  End*/
+
+  /* ↓↓↓↓ 세로슬라이드일 경우 Start */
+  width: 1200px;
+  /* ↑↑↑↑ 세로슬라이드일 경우 End */
+
+  background: #ddd;
+  overflow: hidden;
+}
+.slider > .img_wrap {
   height: 300px;
   width: 1200px;
   float: left;
+  position: relative;
+}
+.slider > .img_wrap > img {
+  width: 100%;
+  position: absolute;
+  /* ↓↓↓↓ 가로슬라이들일 경우 start */
+  /* top: 50%;
+  transform: translateY(-50%); */
+  /* ↑↑↑↑ 가로슬라이들일 경우 End */
 }
 /* 3컬럼 컨텐트 start */
 .contents {
   width: 1200px;
   display: flex;
+  clear: both;
 }
 .contents .content {
   width: 100%;
@@ -114,6 +188,7 @@ a:active {
 
 .fts {
   background: #eee;
+  margin: 0 auto;
 }
 .fts .ft {
   height: 100px;
@@ -134,10 +209,31 @@ a:active {
   display: flex;
   justify-content: center;
 }
+.fts_wrap {
+  width: 100%;
+  /* B 유형 시 start */
+  /* background: #eee; */
+  /* B 유형 시 End */
+}
+
+/* B유형이 아닐경우 없어도됨 start */
+.ft::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background: #eee;
+}
+/* B유형이 아닐경우 없어도됨 End*/
+
 .ft .row {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 16px;
 }
 .shortcut_wrap {
   background: center/cover url("../image/dog.jpg") no-repeat;
@@ -161,9 +257,8 @@ a:active {
 }
 .tab_btn {
   display: flex;
-  gap: 8px;
+  /* gap: 8px; */
   padding: 16px 16px 0;
-  border-bottom: 1px solid #aaa;
 }
 .tab_btn > a {
   display: inline-block;
@@ -172,33 +267,78 @@ a:active {
   align-items: center;
   padding: 0 20px;
   background: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.tab_btn > a:last-child {
+  display: inline-block;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  background: #e7e7e7;
 }
 .tab_contents {
-  margin: 16px;
+  padding: 16px;
+  background: #fff;
+  height: 144px;
 }
 
 .tab_contents .boards > p {
   line-height: 2;
+  display: flex;
+}
+.tab_contents .boards > p > a {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  flex: 0.8;
+}
+.tab_contents .boards > p > span {
+  flex: 0.2;
+  text-align: right;
 }
 .gallerys {
-  display: flex;
-  height: 100px;
+  height: 114px;
   overflow: hidden;
-  gap: 8px;
+  gap: 14px;
   display: none;
 }
 .gallery {
-  width: 100%;
+  flex: 1;
   position: relative;
+  display: flex;
+}
+.gallery > a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
 }
 .gallery > img {
-  height: 100%;
+  flex: 1;
   position: absolute;
   object-fit: cover;
+  height: 100%;
 }
 
 /* popup */
 .pop_wrap {
+  position: fixed;
+  z-index: 101;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  /* B유형일 경우 start */
+  /* background: rgba(0, 0, 0, 0.3); */
+  /* B유형일 경우 End */
+}
+.pop_contain {
   width: 400px;
   height: 300px;
   position: fixed;
@@ -210,8 +350,12 @@ a:active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  display: none;
   border-radius: 5px;
+}
+.pop_wrap::after {
+  content: "1";
+  position: fixed;
+  top: 0;
 }
 
 .pop_hd {
@@ -235,6 +379,6 @@ a:active {
   cursor: pointer;
   border-radius: 5px;
 }
-.pop_wrap > p {
+.pop_contain > p {
   padding: 0 40px;
 }

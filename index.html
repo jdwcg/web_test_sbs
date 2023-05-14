@@ -5,13 +5,20 @@
     <title>shopping</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="script/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script/script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
   </head>
   <body>
     <div class="wrap">
       <header class="hd">
-        <div class="logo"><a href="#">LOGO</a></div>
+        <div class="logo">
+          <img src="./image/dog.jpg" alt="logo" />
+          <a href="#"></a>
+        </div>
         <nav class="nav">
           <ul>
             <li>
@@ -49,41 +56,53 @@
           </ul>
         </nav>
       </header>
-      <section class="slider">
-        <div class="img_wrap"><img src="./image/" alt="img" /></div>
-        <div class="img_wrap"><img src="./image/" alt="img" /></div>
-        <div class="img_wrap"><img src="./image/" alt="img" /></div>
+      <section class="slider_wrap">
+        <div class="slider">
+          <div class="img_wrap"><img src="./image/dog.jpg" alt="img1" /></div>
+          <div class="img_wrap"><img src="./image/dog.jpg" alt="img2" /></div>
+          <div class="img_wrap"><img src="./image/dog.jpg" alt="img3" /></div>
+        </div>
       </section>
       <section class="contents">
         <div class="content tab_wrap">
           <div class="tab_inner">
             <div class="tab_btn">
-              <a href="#">공지사항</a>
-              <a href="#">갤러리</a>
+              <a href="#" class="noticeBtn"> 공지사항 </a>
+              <a href="#" class="galleryBtn"> 갤러리 </a>
             </div>
             <div class="tab_contents">
               <section class="boards">
-                <p class="board" onclick="popHandler('open')">
-                  <a href="javascirpt:void(0)"
-                    >Lorem ipsum dolor sit amet consectetur.</a
-                  >
+                <p class="board popBtn">
+                  <a href="#">
+                    Lorem ipsum dolor, sit consectetur adipisicing amet.
+                  </a>
+                  <span>00.00.00</span>
                 </p>
                 <p class="board">
-                  <a href="#">Lorem ipsum dolor sit amet consectetur.</a>
+                  <a href="#">
+                    ipsum dolor, sit amet consectetur adipisicing Lorem.
+                  </a>
+                  <span>00.00.00</span>
                 </p>
                 <p class="board">
-                  <a href="#">Lorem ipsum dolor sit amet consectetur.</a>
+                  <a href="#">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing.
+                  </a>
+                  <span>00.00.00</span>
                 </p>
               </section>
               <section class="gallerys">
                 <div class="gallery">
                   <img src="./image/dog.jpg" alt="img" />
+                  <a href=""></a>
                 </div>
                 <div class="gallery">
                   <img src="./image/dog.jpg" alt="img" />
+                  <a href=""></a>
                 </div>
                 <div class="gallery">
                   <img src="./image/dog.jpg" alt="img" />
+                  <a href=""></a>
                 </div>
               </section>
             </div>
@@ -97,19 +116,27 @@
           <button class="shortcut">바로가기</button>
         </div>
       </section>
+    </div>
+    <div class="wrap fts_wrap">
       <footer class="contents fts">
         <div class="content ft">
           <a href=""></a>
-          <img src="./image/" alt="img" />
+          <img src="./image/" alt="LOGO" />
         </div>
         <div class="content ft">
           <p>copyRight...</p>
         </div>
         <div class="content ft">
           <div class="row">
-            <div class="col"><a href="#">인스타</a></div>
-            <div class="col"><a href="#">트위터</a></div>
-            <div class="col"><a href="#">블로그</a></div>
+            <div class="col">
+              <a href="#"><i class="bi bi-twitter"></i></a>
+            </div>
+            <div class="col">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+            </div>
+            <div class="col">
+              <a href="#"><i class="bi bi-twitch"></i></a>
+            </div>
           </div>
         </div>
       </footer>
@@ -117,13 +144,15 @@
 
     <!-- popup -->
     <div class="pop_wrap">
-      <div class="pop_hd">타이틀</div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus iusto
-        quo earum ex soluta est velit perferendis vel, doloremque omnis!
-      </p>
-      <div class="btn_wrap">
-        <button onclick="popHandler('close')">닫기</button>
+      <div class="pop_contain">
+        <div class="pop_hd">타이틀</div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+          iusto quo earum ex soluta est velit perferendis vel, doloremque omnis!
+        </p>
+        <div class="btn_wrap">
+          <button class="popClose">닫기</button>
+        </div>
       </div>
     </div>
   </body>
