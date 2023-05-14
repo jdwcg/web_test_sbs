@@ -10,36 +10,231 @@ ul,
 li {
   list-style: none;
 }
+a {
+  text-decoration: none;
+}
+a:link,
+a:active {
+  color: #777;
+}
 /* reset end */
 
 .wrap {
   width: 1200px;
-  border: 1px dashed red;
   margin: 0 auto;
 }
 
 .wrap > .hd {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   height: 100px;
+  background: #eee;
 }
 .wrap > .hd > .nav {
+  margin-top: 25px;
 }
 .wrap > .hd > .nav > ul {
   display: flex;
 }
+.wrap > .hd > .nav > ul > li {
+  width: 100px;
+  text-align: center;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+.wrap > .hd > .nav > ul > li > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+.wrap > .hd > .nav > ul > li > ul:hover {
+  background: #e7e7e7;
+  transition: 0.3s ease;
+}
 .wrap > .hd > .nav > ul > li > ul {
+  background: #eee;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
   display: none;
 }
-.wrap > .hd > .nav > ul > li {
+
+.wrap > .hd > .nav > ul > li > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  transition: 0.3s ease;
 }
-.wrap > .hd > .nav > .logo {
+
+.wrap > .hd > .nav > ul > li > ul > li:hover {
+  background: #ddd;
 }
 
 .wrap > .slider {
+  width: 1200px;
+  height: 300px;
+  overflow: hidden;
+  background: #ddd;
 }
-.wrap > .contents {
+.wrap > .slider > .img_wrap {
+  height: 300px;
+  width: 1200px;
+  float: left;
 }
-.wrap > .ft {
+/* 3컬럼 컨텐트 start */
+.contents {
+  width: 1200px;
+  display: flex;
+}
+.contents .content {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+.contents .content img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  object-fit: cover;
+}
+.content > a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+/* 3컬럼 컨텐트 end */
+
+.fts {
+  background: #eee;
+}
+.fts .ft {
+  height: 100px;
+}
+.ft:nth-child(1) {
+  flex: 0.2;
+}
+.ft:nth-child(2) {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ft:nth-child(3) {
+  flex: 0.2;
+}
+.ft {
+  display: flex;
+  justify-content: center;
+}
+.ft .row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.shortcut_wrap {
+  background: center/cover url("../image/dog.jpg") no-repeat;
+}
+.shortcut_wrap .shortcut {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  cursor: pointer;
+  background: white;
+  border: none;
+  opacity: 0.5;
+}
+
+/* 탭컨텐트 */
+.tab_inner {
+  background: #e7e7e7;
+  height: 200px;
+}
+.tab_btn {
+  display: flex;
+  gap: 8px;
+  padding: 16px 16px 0;
+  border-bottom: 1px solid #aaa;
+}
+.tab_btn > a {
+  display: inline-block;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  background: #fff;
+}
+.tab_contents {
+  margin: 16px;
+}
+
+.tab_contents .boards > p {
+  line-height: 2;
+}
+.gallerys {
+  display: flex;
+  height: 100px;
+  overflow: hidden;
+  gap: 8px;
+  display: none;
+}
+.gallery {
+  width: 100%;
+  position: relative;
+}
+.gallery > img {
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+/* popup */
+.pop_wrap {
+  width: 400px;
+  height: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+  border-radius: 5px;
+}
+
+.pop_hd {
+  border-bottom: 1px solid #ddd;
+}
+
+.btn_wrap {
+  border-top: 1px solid #ddd;
+}
+.pop_hd,
+.btn_wrap > p,
+.btn_wrap {
+  padding: 16px;
+  text-align: center;
+}
+.btn_wrap > button {
+  height: 40px;
+  width: 90px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.pop_wrap > p {
+  padding: 0 40px;
 }
