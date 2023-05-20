@@ -32,11 +32,10 @@ a:active {
   background: #eee;
   position: relative;
   z-index: 100;
-  position: relative;
 }
 
 /* B 유형 경우 start */
-/* .wrap::after {
+.wrap::after {
   content: "";
   position: absolute;
   left: 0;
@@ -44,7 +43,7 @@ a:active {
   width: 100%;
   height: 100px;
   background: #eee;
-} */
+}
 /* B 유형 경우 End */
 
 .logo {
@@ -83,8 +82,8 @@ a:active {
   position: absolute;
   right: 0;
   /* B유형일 경우 start */
-  /* width: 100%;
-  background: #eee; */
+  width: 100%;
+  background: #eee;
   /* B유형일 경우 End */
 }
 .wrap > .hd > .nav > ul {
@@ -134,13 +133,13 @@ a:active {
   position: relative;
 }
 .slider {
-  /* ↓↓↓↓ 가로슬라이드일 경우  start*/
-  /* width: 300%; */
-  /* ↑↑↑↑ 가로슬라이드일 경우  End*/
+  /* ↓↓↓↓ 가로슬라이드일 경우 off 그렇지않으면 on  start*/
+  width: 300%;
+  /* ↑↑↑↑ 가로슬라이드일 경우 off 그렇지않으면 on  End*/
 
-  /* ↓↓↓↓ 세로슬라이드일 경우 Start */
-  width: 1200px;
-  /* ↑↑↑↑ 세로슬라이드일 경우 End */
+  /* ↓↓↓↓ 세로슬라이드일 경우 on 그렇지않으면 off Start */
+  /* width: 1200px; */
+  /* ↑↑↑↑ 세로슬라이드일 경우 on 그렇지않으면 off End */
 
   background: #ddd;
   overflow: hidden;
@@ -213,7 +212,7 @@ a:active {
 .fts_wrap {
   width: 100%;
   /* B 유형 시 start */
-  /* background: #eee; */
+  background: #eee;
   /* B 유형 시 End */
 }
 
