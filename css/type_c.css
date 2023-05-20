@@ -153,6 +153,7 @@ a:active {
   display: flex;
   border: 1px solid red;
   padding: 10px;
+  display: none;
 }
 .gallery {
   flex: 1;

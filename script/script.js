@@ -60,9 +60,9 @@ $(function () {
   //   });
   // }, 3000);
   //   ↓↓↓↓ 슬라이더 제자리
-  // $(".img_wrap:gt(0)").hide();
-  // setInterval(function () {
-  //   $(".img_wrap:first").fadeOut(1500).next().fadeIn(1500);
-  //   $(".img_wrap:first").appendTo(".slider");
-  // }, 3000);
+  $(".img_wrap:gt(0)").hide();
+  setInterval(function () {
+    $(".img_wrap:first").fadeOut(1500).next().fadeIn(1500);
+    $(".img_wrap:first").appendTo(".slider");
+  }, 3000);
 });
