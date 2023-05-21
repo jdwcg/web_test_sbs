@@ -38,10 +38,10 @@ $(function () {
 
   //   메뉴 CCCCC
   $(".nav ul li").mouseenter(function () {
-    $(this).children("ul").stop().slideDown(); /* fadeIn or slideDown */
+    $(this).children("ul").stop().fadeIn(); /* fadeIn or slideDown */
   });
   $(".nav ul li").mouseleave(function () {
-    $(this).children("ul").stop().slideUp(); /* fadeIn or slideUp */
+    $(this).children("ul").stop().fadeOut(); /* fadeOut or slideUp */
   });
 
   // ↓↓↓↓ 슬라이더 가로
@@ -54,11 +54,12 @@ $(function () {
 
   // ↓↓↓↓ 슬라이더 세로
   // setInterval(function () {
-  //   $(".slider").animate({ "margin-top": "-300px" }, function () {
+  //   $(".slider").animate({ "margin-top": "-350px" }, function () {
   //     $(".img_wrap:first").appendTo(".slider");
   //     $(".slider").css({ "margin-top": "0" });
   //   });
   // }, 3000);
+
   //   ↓↓↓↓ 슬라이더 제자리
   $(".img_wrap:gt(0)").hide();
   setInterval(function () {

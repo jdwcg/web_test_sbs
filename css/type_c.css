@@ -21,11 +21,13 @@ a:active {
 
 .contain {
   width: 1000px;
-  border: 1px dashed red;
+  background: #e8e8e8;
   display: flex;
 }
 .hd {
   width: 200px;
+  position: relative;
+  z-index: 100;
 }
 .hd .logo {
   width: 200px;
@@ -40,8 +42,6 @@ a:active {
   bottom: 0;
 }
 
-.nav ul {
-}
 .nav ul > li > a {
   display: inline-block;
   width: 100%;
@@ -60,12 +60,13 @@ a:active {
 
 .nav ul > li > ul {
   display: none;
+  background: #ddd;
 
   /* c-3,4 라면 주석 해제 */
-  /* position: absolute;
+  position: absolute;
   left: 200px;
   top: -40px;
-  width: 200px; */
+  width: 200px;
 }
 
 .main {
@@ -73,22 +74,22 @@ a:active {
   display: flex;
   flex-direction: column;
 }
-.slider {
-  border: 1px dashed red;
+.slider_wrap {
+  background: #000;
   height: 350px;
 }
 .contents {
-  border: 1px dashed red;
+  background: #e1e1e1;
   height: 200px;
 }
 .ft {
-  border: 1px dashed red;
+  background: #ddd;
   height: 100px;
   display: flex;
 }
 .ft .logo {
   width: 150px;
-  border: 1px dashed red;
+  background: #ccc;
 }
 .ft .ft_wrap {
   display: flex;
@@ -97,7 +98,7 @@ a:active {
 }
 .ft_menu,
 .ft_copy {
-  border: 1px dashed red;
+  background: #bbb;
   flex: 1;
   display: flex;
   align-items: center;
@@ -109,6 +110,11 @@ a:active {
 .row {
   display: flex;
 }
+.row .col:nth-child(1) {
+  background: #e8e8e8;
+  padding: 10px;
+  background: #e7e7e7;
+}
 .col {
   flex: 1;
 }
@@ -117,22 +123,30 @@ a:active {
   width: 260px;
 }
 .tab_btns {
-  border: 1px dashed blue;
   height: 40px;
   display: flex;
+  background: #e7e7e7;
+
+}
+.tab_btns .noticeBtn {
+  background: #fff;
 }
 .tab_btns a {
   display: flex;
-  border: 1px dashed red;
   align-items: center;
   padding: 0 16px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 /* 탭 */
+.tab_contents {
+  background: #fff;
+  padding: 10px;
+}
 .tab_contents .boards > p {
   line-height: 2;
   display: flex;
-  border: 1px dashed red;
 }
 .tab_contents .boards > p > a {
   text-overflow: ellipsis;
@@ -148,11 +162,10 @@ a:active {
 }
 
 .gallerys {
+
   height: 114px;
   gap: 8px;
   display: flex;
-  border: 1px solid red;
-  padding: 10px;
   display: none;
 }
 .gallery {
@@ -160,7 +173,6 @@ a:active {
   position: relative;
   display: flex;
   height: 90px;
-  border: 1px solid red;
   overflow: hidden;
 }
 .gallery > a {
@@ -176,3 +188,113 @@ a:active {
   object-fit: cover;
   height: 100%;
 }
+.gallery:nth-child(1) {
+  background: center/cover url('../image/dog.jpg') no-repeat;
+  height: 100%;
+}
+.gallery:nth-child(2) {
+  background: center/cover url('https://picsum.photos/200/300') no-repeat;
+  height: 100%;
+}
+.gallery:nth-child(3) {
+  background: center/cover url('https://picsum.photos/seed/picsum/200/300') no-repeat;
+  height: 100%;
+}
+
+
+/* popup Start */
+.pop_wrap {
+  display: none;
+}
+.pop_contain {
+  width: 400px;
+  height: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  z-index: 2;
+
+}
+/* 레이어팝업 백그라운드 유형일 경우 on 아니면 off */
+.pop_wrap::after {
+  content: "1";
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  opacity: .2;
+}
+/* 레이어팝업 백그라운드 유형일 경우 End */
+
+.pop_hd {
+  border-bottom: 1px solid #ddd;
+}
+
+.btn_wrap {
+  border-top: 1px solid #ddd;
+}
+.pop_hd,
+.btn_wrap > p,
+.btn_wrap {
+  padding: 16px;
+  text-align: center;
+}
+.btn_wrap > button {
+  height: 40px;
+  width: 90px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.pop_contain > p {
+  padding: 0 40px;
+}
+/* popup End */
+
+
+/* 슬라이더 start */
+.slider_wrap {
+  overflow: hidden;
+  width: 800px;
+  height:350px;
+  position: relative;
+}
+.slider {
+  /* ↓↓↓↓ 가로슬라이드일 경우 off 그렇지않으면 on  start*/
+  /* width: 300%; */
+  /* ↑↑↑↑ 가로슬라이드일 경우 off 그렇지않으면 on  End*/
+
+  /* ↓↓↓↓ 세로슬라이드일 경우 on 그렇지않으면 off Start */
+  /* width: 1200px; */
+  /* ↑↑↑↑ 세로슬라이드일 경우 on 그렇지않으면 off End */
+
+  background: #ddd;
+  overflow: hidden;
+}
+.slider > .img_wrap {
+  height: 350px;
+  width: 800px;
+  float: left;
+  position: relative;
+}
+.slider > .img_wrap > img {
+  width: 100%;
+  position: absolute;
+  /* ↓↓↓↓ 가로슬라이들일 경우 start */
+  /* top: 50%;
+  transform: translateY(-50%); */
+  /* ↑↑↑↑ 가로슬라이들일 경우 End */
+}
+
+/* 슬라이더 End */

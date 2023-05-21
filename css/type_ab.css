@@ -126,6 +126,7 @@ a:active {
   background: #ddd;
 }
 
+/* 슬라이더 start */
 .slider_wrap {
   overflow: hidden;
   width: 1200px;
@@ -133,19 +134,14 @@ a:active {
   position: relative;
 }
 .slider {
-  /* ↓↓↓↓ 가로슬라이드일 경우 off 그렇지않으면 on  start*/
-  width: 300%;
-  /* ↑↑↑↑ 가로슬라이드일 경우 off 그렇지않으면 on  End*/
-
-  /* ↓↓↓↓ 세로슬라이드일 경우 on 그렇지않으면 off Start */
-  /* width: 1200px; */
-  /* ↑↑↑↑ 세로슬라이드일 경우 on 그렇지않으면 off End */
-
+  /* ↓↓↓↓ 가로슬라이드일 경우 off 그렇지않으면 on  */
+  /* width: 300%; */
+  /* ↓↓↓↓ 세로슬라이드일 경우 on 그렇지않으면 off  */
+  width: 1200px;
   background: #ddd;
-  overflow: hidden;
 }
 .slider > .img_wrap {
-  height: 300px;
+  /* height: 300px; */
   width: 1200px;
   float: left;
   position: relative;
@@ -154,10 +150,13 @@ a:active {
   width: 100%;
   position: absolute;
   /* ↓↓↓↓ 가로슬라이들일 경우 start */
-  /* top: 50%;
-  transform: translateY(-50%); */
+  top: 50%;
+  transform: translateY(-50%);
   /* ↑↑↑↑ 가로슬라이들일 경우 End */
 }
+
+/* 슬라이더 End */
+
 /* 3컬럼 컨텐트 start */
 .contents {
   width: 1200px;
@@ -325,7 +324,7 @@ a:active {
   height: 100%;
 }
 
-/* popup */
+/* popup start */
 .pop_wrap {
   position: fixed;
   z-index: 101;
@@ -382,3 +381,4 @@ a:active {
 .pop_contain > p {
   padding: 0 40px;
 }
+/* popup End */
