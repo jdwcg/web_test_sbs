@@ -131,17 +131,16 @@ a:active {
   overflow: hidden;
   width: 1200px;
   height: 300px;
-  position: relative;
+  /* position: relative; */
 }
 .slider {
   /* ↓↓↓↓ 가로슬라이드일 경우 off 그렇지않으면 on  */
-  /* width: 300%; */
+  width: 300%;
   /* ↓↓↓↓ 세로슬라이드일 경우 on 그렇지않으면 off  */
-  width: 1200px;
-  background: #ddd;
+  /* width: 1200px; */
 }
 .slider > .img_wrap {
-  /* height: 300px; */
+  height: 300px; /* 가로일경우*/
   width: 1200px;
   float: left;
   position: relative;

@@ -1,0 +1,53 @@
+@charset 'utf-8';
+/* reset start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:link,
+a:active {
+  color: #777;
+}
+/* reset end */
+
+html,
+body,
+.wrapper {
+  height: 100%;
+  border: 1px dashed red;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.ft {
+  border: 1px dashed blue;
+  height: 120px;
+}
+
+.wrap_inner {
+  flex: 1;
+  display: flex;
+}
+
+.main {
+  display: flex;
+}
+.hd {
+  border: 1px dashed blue;
+
+  width: 200px;
+}
+.content {
+  width: 400px;
+  border: 1px dashed blue;
+}

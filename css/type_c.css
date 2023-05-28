@@ -61,7 +61,6 @@ a:active {
 .nav ul > li > ul {
   display: none;
   background: #ddd;
-
   /* c-3,4 라면 주석 해제 */
   position: absolute;
   left: 200px;
@@ -202,9 +201,18 @@ a:active {
 }
 
 
-/* popup Start */
+/* popup start */
 .pop_wrap {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
   display: none;
+  /* B유형일 경우 start */
+  /* background: rgba(0, 0, 0, 0.3); */
+  /* B유형일 경우 End */
 }
 .pop_contain {
   width: 400px;
@@ -220,8 +228,38 @@ a:active {
   justify-content: space-between;
   border-radius: 5px;
   z-index: 2;
-
 }
+.pop_wrap::after {
+  content: "1";
+  position: fixed;
+  top: 0;
+}
+
+.pop_hd {
+  border-bottom: 1px solid #ddd;
+}
+
+.btn_wrap {
+  border-top: 1px solid #ddd;
+}
+.pop_hd,
+.btn_wrap > p,
+.btn_wrap {
+  padding: 16px;
+  text-align: center;
+}
+.btn_wrap > button {
+  height: 40px;
+  width: 90px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.pop_contain > p {
+  padding: 0 40px;
+}
+/* popup End */
 /* 레이어팝업 백그라운드 유형일 경우 on 아니면 off */
 .pop_wrap::after {
   content: "1";
