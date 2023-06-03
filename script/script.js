@@ -60,6 +60,14 @@ $(function () {
   // }, 3000);
 
   // ↓↓↓↓ 슬라이더 세로
+  // setInterval(function () {
+  //   $(".slider").animate({ "margin-top": "-100%" }, function () {
+  //     $(".img_wrap:first").appendTo(".slider");
+  //     $(".slider").css({ "margin-top": "0" });
+  //   });
+  // }, 3000);
+
+  // ↓↓↓↓ 슬라이더 세로 E유형
   setInterval(function () {
     let slider = document.querySelector(".img_wrap");
     let height = slider.offsetHeight;
