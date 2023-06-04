@@ -371,6 +371,7 @@ a:active {
   width: 300%;
   /* 세로 */
   width: 100%;
+  overflow: hidden;
 }
 .slider > .img_wrap {
   width: calc(100vw - 430px);
@@ -384,5 +385,26 @@ a:active {
   height: 400px;
   object-fit: cover;
   position: absolute;
+}
+/* 추가 */
+.img_tit {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  width: 50%;
+}
+
+.img_tit h1,
+.img_tit p {
+  color: white;
+}
+
+.img_tit h1 {
+  font-size: 48px;
+}
+.img_tit p {
+  font-size: 20px;
 }
 /* 슬라이더 End */

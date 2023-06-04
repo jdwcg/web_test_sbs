@@ -310,11 +310,9 @@ body,
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-width: 700px;
 }
-.co_info h4 {
-  /* display: flex;
-  gap: 20px; */
-}
+
 .co_info h4 span {
   margin: 0 10px;
 }
@@ -403,4 +401,26 @@ body,
   object-fit: cover;
   position: absolute;
 }
+/* 추가 */
+.img_tit {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  width: 50%;
+}
+
+.img_tit h1,
+.img_tit p {
+  color: white;
+}
+
+.img_tit h1 {
+  font-size: 48px;
+}
+.img_tit p {
+  font-size: 20px;
+}
+
 /* 슬라이더 End */
