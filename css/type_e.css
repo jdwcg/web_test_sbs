@@ -108,10 +108,12 @@ body,
 .spot {
   text-align: center;
   margin-top: 20px;
+  color: var(--sub);
 }
 .spot a {
   padding: 0 5px;
   color: var(--sub);
+  font-size: 14px;
 }
 
 /* 컨텐트영역 */
@@ -315,6 +317,13 @@ body,
 
 .co_info h4 span {
   margin: 0 10px;
+  font-size: 14px;
+  color: var(--sub);
+  opacity: 0.3;
+}
+.co_info h4 a {
+  font-size: 14px;
+  color: var(--sub);
 }
 /* popup start */
 .pop_wrap {
