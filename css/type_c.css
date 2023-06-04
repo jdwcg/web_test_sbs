@@ -232,7 +232,7 @@ a:active {
   z-index: 2;
 }
 .pop_wrap::after {
-  content: "1";
+  content: "";
   position: fixed;
   top: 0;
 }

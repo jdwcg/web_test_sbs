@@ -349,7 +349,7 @@ a:active {
   border-radius: 5px;
 }
 .pop_wrap::after {
-  content: "1";
+  content: "";
   position: fixed;
   top: 0;
 }
