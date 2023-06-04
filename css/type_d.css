@@ -32,7 +32,7 @@ a:active {
 }
 .hd .logo {
   width: 200px;
-  height: 40px;
+  height: 80px;
   position: relative;
 }
 .logo a {
@@ -63,16 +63,16 @@ a:active {
   display: none;
   background: #ddd;
 }
-/* D-3,4 */
-/* .nav ul > li > div {
-  display: none;
+/* D-3,4 일경우 주석 해제 */
+.nav ul > li > div {
+  /* display: none;
   background: #ddd;
   position: absolute;
   left: 200px;
   top: 0;
   width: 100vw;
-  border: 1px solid red;
-} */
+  border: 1px solid red; */
+}
 .nav ul > li > div > ul {
   float: left;
 }

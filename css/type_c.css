@@ -31,7 +31,7 @@ a:active {
 }
 .hd .logo {
   width: 200px;
-  height: 40px;
+  height: 80px;
   position: relative;
 }
 .logo a {
@@ -62,10 +62,10 @@ a:active {
   display: none;
   background: #ddd;
   /* c-3,4 라면 주석 해제 */
-  position: absolute;
+  /* position: absolute;
   left: 200px;
   top: -40px;
-  width: 200px;
+  width: 200px; */
 }
 
 .main {
@@ -73,10 +73,7 @@ a:active {
   display: flex;
   flex-direction: column;
 }
-.slider_wrap {
-  background: #000;
-  height: 350px;
-}
+
 .contents {
   background: #e1e1e1;
   height: 200px;
@@ -118,6 +115,13 @@ a:active {
   flex: 1;
 }
 
+.col:nth-child(2) {
+  background: center/cover url("https://picsum.photos/200/300") no-repeat;
+}
+.col:nth-child(3) {
+  background: center/cover url("../image/dog.jpg") no-repeat;
+}
+
 .tab_wrap {
   width: 260px;
 }
@@ -125,7 +129,6 @@ a:active {
   height: 40px;
   display: flex;
   background: #e7e7e7;
-
 }
 .tab_btns .noticeBtn {
   background: #fff;
@@ -161,7 +164,6 @@ a:active {
 }
 
 .gallerys {
-
   height: 114px;
   gap: 8px;
   display: flex;
@@ -188,18 +190,18 @@ a:active {
   height: 100%;
 }
 .gallery:nth-child(1) {
-  background: center/cover url('../image/dog.jpg') no-repeat;
+  background: center/cover url("../image/dog.jpg") no-repeat;
   height: 100%;
 }
 .gallery:nth-child(2) {
-  background: center/cover url('https://picsum.photos/200/300') no-repeat;
+  background: center/cover url("https://picsum.photos/200/300") no-repeat;
   height: 100%;
 }
 .gallery:nth-child(3) {
-  background: center/cover url('https://picsum.photos/seed/picsum/200/300') no-repeat;
+  background: center/cover url("https://picsum.photos/seed/picsum/200/300")
+    no-repeat;
   height: 100%;
 }
-
 
 /* popup start */
 .pop_wrap {
@@ -270,7 +272,7 @@ a:active {
   left: 0;
   right: 0;
   background: #000;
-  opacity: .2;
+  opacity: 0.2;
 }
 /* 레이어팝업 백그라운드 유형일 경우 End */
 
@@ -300,12 +302,12 @@ a:active {
 }
 /* popup End */
 
-
 /* 슬라이더 start */
+
 .slider_wrap {
   overflow: hidden;
   width: 800px;
-  height:350px;
+  height: 350px;
   position: relative;
 }
 .slider {
@@ -327,8 +329,11 @@ a:active {
   position: relative;
 }
 .slider > .img_wrap > img {
+  object-fit: cover;
+  height: 350px;
   width: 100%;
   position: absolute;
+  object-fit: cover;
   /* ↓↓↓↓ 가로슬라이들일 경우 start */
   /* top: 50%;
   transform: translateY(-50%); */

@@ -52,12 +52,12 @@ a:active {
   padding: 0 16px;
   overflow: hidden;
   height: 100px;
-  width: 100px;
+  width: 200px;
 }
 .logo > a {
   position: absolute;
   text-align: center;
-  width: 100px;
+  width: 200px;
   height: 100px;
   top: 0;
   bottom: 0;
@@ -73,7 +73,7 @@ a:active {
   top: 50%;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  width: 70px;
+  width: 200px;
 }
 .wrap > .hd > .nav {
   margin-top: 25px;
@@ -81,10 +81,10 @@ a:active {
   justify-content: flex-end;
   position: absolute;
   right: 0;
-  /* B유형일 경우 start */
+  /* B유형일 경우  start */
   width: 100%;
   background: #eee;
-  /* B유형일 경우 End */
+  /* B유형일 경우  End */
 }
 .wrap > .hd > .nav > ul {
   display: flex;
@@ -135,9 +135,9 @@ a:active {
 }
 .slider {
   /* ↓↓↓↓ 가로슬라이드일 경우 off 그렇지않으면 on  */
-  width: 300%;
+  /* width: 300%; */
   /* ↓↓↓↓ 세로슬라이드일 경우 on 그렇지않으면 off  */
-  /* width: 1200px; */
+  width: 1200px;
 }
 .slider > .img_wrap {
   height: 300px; /* 가로일경우*/
@@ -147,11 +147,9 @@ a:active {
 }
 .slider > .img_wrap > img {
   width: 100%;
+  height: 300px;
   position: absolute;
-  /* ↓↓↓↓ 가로슬라이들일 경우 start */
-  top: 50%;
-  transform: translateY(-50%);
-  /* ↑↑↑↑ 가로슬라이들일 경우 End */
+  object-fit: cover;
 }
 
 /* 슬라이더 End */
@@ -234,7 +232,7 @@ a:active {
   gap: 16px;
 }
 .shortcut_wrap {
-  background: center/cover url("../image/dog.jpg") no-repeat;
+  background: center/cover url("https://picsum.photos/200/300") no-repeat;
 }
 .shortcut_wrap .shortcut {
   position: absolute;

@@ -38,12 +38,13 @@ $(function () {
 
   //   메뉴 C or D-1, D-2, E-1, E-2, E-3, E-4
   $(".nav ul li").mouseenter(function () {
-    $(this).children("ul").stop().fadeIn(); /* fadeIn or slideDown */
+    $(this).children("ul").stop().slideDown(); /* fadeIn or slideDown */
   });
   $(".nav ul li").mouseleave(function () {
-    $(this).children("ul").stop().fadeOut(); /* fadeOut or slideUp */
+    $(this).children("ul").stop().slideUp(); /* fadeOut or slideUp */
   });
-  //   메뉴 D-3, D-4
+
+  //   메뉴 D-3, D-4 번만 해당
   // $(".nav ul li").mouseenter(function () {
   //   $(this).children("div").stop().fadeIn(); /* fadeIn or slideDown */
   // });
@@ -59,12 +60,19 @@ $(function () {
   //   });
   // }, 3000);
 
-  // ↓↓↓↓ 슬라이더 세로
+  // ↓↓↓↓ 슬라이더 세로 (margin-top이 a,b,c 유형일 경 고정값300px or 350px / d유형일경우 400px)
   // setInterval(function () {
-  //   $(".slider").animate({ "margin-top": "-100%" }, function () {
+  //   $(".slider").animate({ "margin-top": "-400px" }, function () {
   //     $(".img_wrap:first").appendTo(".slider");
   //     $(".slider").css({ "margin-top": "0" });
   //   });
+  // }, 3000);
+
+  // ↓↓↓↓ 슬라이더 제자리
+  // $(".img_wrap:gt(0)").hide();
+  // setInterval(function () {
+  //   $(".img_wrap:first").fadeOut(1500).next().fadeIn(1500);
+  //   $(".img_wrap:first").appendTo(".slider");
   // }, 3000);
 
   // ↓↓↓↓ 슬라이더 세로 E유형
@@ -76,11 +84,4 @@ $(function () {
       $(".slider").css({ "margin-top": "0" });
     });
   }, 3000);
-
-  // ↓↓↓↓ 슬라이더 제자리
-  // $(".img_wrap:gt(0)").hide();
-  // setInterval(function () {
-  //   $(".img_wrap:first").fadeOut(1500).next().fadeIn(1500);
-  //   $(".img_wrap:first").appendTo(".slider");
-  // }, 3000);
 });
